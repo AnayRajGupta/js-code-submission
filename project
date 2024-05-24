@@ -1,0 +1,31 @@
+const NFTs=[]
+function mintNFT(tournament,team_name,team_rank ){
+
+  const NFT={
+
+  "Tournment" : tournament,"teamname":team_name,"Teamrank":team_rank
+
+}
+NFTs.push(NFT);
+console.log("minted: "+ team_name);
+}
+function listNFTs(){
+  for(let i=0;i<NFTs.length;i++){
+    console.log("\nTounament"+ NFTs[i].Tournament);
+    console.log("teamname"+ NFTs[i].teamname);
+    console.log("Teamrank"+ NFTs[i].Teamrank); 
+  }
+}
+
+function getTotalSupply(){
+  console.log("\n"+NFTs.length); 
+
+}
+
+mintNFT("IPL","CSK",5);
+mintNFT("IPL","RCB",4);
+mintNFT("IPL","RR",3);
+mintNFT("IPL","SRH",2);
+mintNFT("IPL","KKR",1);
+listNFTs();
+getTotalSupply();
